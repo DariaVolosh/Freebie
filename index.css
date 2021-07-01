@@ -298,6 +298,7 @@ body .features {
   flex-direction: column;
   align-items: center;
   position: relative;
+  border-bottom: 1px solid #D8E3FE;
 }
 body .features .figures1,
 body .features .figures2,
@@ -384,6 +385,63 @@ body .features .buttons p {
   font-size: 11px;
   color: #ADB3CB;
 }
+body .stats {
+  width: 100%;
+  height: 342px;
+  display: flex;
+  font-family: Quicksand;
+}
+body .stats div {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+body .stats div img {
+  margin-top: 66px;
+  margin-bottom: 26px;
+}
+body .stats div h2 {
+  font-weight: 400;
+  font-size: 48px;
+}
+body .stats div p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  width: 260px;
+  padding-top: 26px;
+  padding-bottom: 66px;
+}
+body .stats .left-side {
+  background-color: #6888FF;
+  align-items: flex-end;
+}
+body .stats .left-side h2,
+body .stats .left-side p {
+  color: white;
+}
+body .stats .left-side img,
+body .stats .left-side h2,
+body .stats .left-side p {
+  margin-right: 90px;
+}
+body .stats .left-side p {
+  text-align: right;
+}
+body .stats .right-side {
+  background-color: #E9EFFF;
+  align-items: flex-start;
+}
+body .stats .right-side h2,
+body .stats .right-side p {
+  color: #5E80FF;
+}
+body .stats .right-side img,
+body .stats .right-side h2,
+body .stats .right-side p {
+  margin-left: 90px;
+}
 @media only screen and (max-width: 1200px) {
   body nav .nav-content {
     width: 95%;
@@ -467,6 +525,47 @@ body .features .buttons p {
   body .plan-and-manage svg {
     width: 90%;
   }
+  body .stats {
+    height: auto;
+  }
+  body .stats div {
+    justify-content: center;
+  }
+  body .stats div img {
+    margin-top: 40px;
+  }
+  body .stats div p {
+    width: 80%;
+    padding-bottom: 40px;
+  }
+  body .stats .left-side {
+    align-items: center;
+  }
+  body .stats .left-side img,
+  body .stats .left-side h2,
+  body .stats .left-side p {
+    margin-right: 0;
+  }
+  body .stats .left-side img {
+    width: 55px;
+  }
+  body .stats .left-side p {
+    text-align: center;
+  }
+  body .stats .right-side {
+    align-items: center;
+  }
+  body .stats .right-side img,
+  body .stats .right-side h2,
+  body .stats .right-side p {
+    margin-left: 0;
+  }
+  body .stats .right-side img {
+    width: 60px;
+  }
+  body .stats .right-side p {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 500px) {
   body .features .figures1,
@@ -497,6 +596,15 @@ body .features .buttons p {
   }
   body .features .buttons {
     margin-bottom: 80px;
+  }
+  body .stats {
+    display: block;
+  }
+  body .stats div {
+    width: 100%;
+  }
+  body .stats div h2 {
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 400px) {
