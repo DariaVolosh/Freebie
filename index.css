@@ -235,6 +235,7 @@ body .plan-and-manage {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #D8E3FE;
 }
 body .plan-and-manage .text-and-buttons {
   width: 28%;
@@ -292,6 +293,97 @@ body .plan-and-manage svg {
   height: 436px;
   margin-left: 55px;
 }
+body .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+body .features .figures1,
+body .features .figures2,
+body .features .figures3 {
+  position: absolute;
+}
+body .features .figures1 svg,
+body .features .figures2 svg,
+body .features .figures3 svg {
+  position: absolute;
+}
+body .features .title,
+body .features .description,
+body .features .buttons {
+  z-index: 1;
+}
+body .features .title {
+  margin-top: 170px;
+  font-weight: 500;
+  color: #3D4F9F;
+  text-align: center;
+}
+body .features .title p {
+  font-family: Roboto;
+  font-size: 10px;
+}
+body .features .title h3 {
+  font-family: Quicksand;
+  font-size: 24px;
+  padding-top: 20px;
+}
+body .features .description {
+  width: 53%;
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+body .features .description div {
+  text-align: center;
+  font-family: "Open Sans";
+  width: 140px;
+  height: 230px;
+}
+body .features .description div h5 {
+  color: #4074F8;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+body .features .description div p {
+  font-weight: 600;
+  font-size: 11px;
+  color: #ADB3CB;
+  line-height: 20px;
+}
+body .features .description .line {
+  position: relative;
+  top: 10px;
+}
+body .features .buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 170px;
+}
+body .features .buttons button {
+  border: none;
+  width: 115px;
+  height: 45px;
+  border-radius: 2px;
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 13px;
+}
+body .features .buttons svg {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+body .features .buttons p {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  color: #ADB3CB;
+}
 @media only screen and (max-width: 1200px) {
   body nav .nav-content {
     width: 95%;
@@ -320,6 +412,12 @@ body .plan-and-manage svg {
     margin-bottom: 80px;
     width: 70%;
     height: auto;
+  }
+  body .features .description {
+    width: 90%;
+  }
+  body .features .description div {
+    width: 20%;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -370,6 +468,37 @@ body .plan-and-manage svg {
     width: 90%;
   }
 }
+@media only screen and (max-width: 500px) {
+  body .features .figures1,
+  body .features .figures2,
+  body .features .figures3 {
+    display: none;
+  }
+  body .features .title {
+    margin-top: 80px;
+  }
+  body .features .description {
+    display: block;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    width: 80%;
+  }
+  body .features .description div {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+  body .features .description div h5 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  body .features .description .line {
+    display: none;
+  }
+  body .features .buttons {
+    margin-bottom: 80px;
+  }
+}
 @media only screen and (max-width: 400px) {
   body nav .nav-content .right-side {
     width: auto;
@@ -404,6 +533,21 @@ body .plan-and-manage svg {
   body .plan-and-manage svg {
     margin-bottom: 40px;
     margin-top: 30px;
+  }
+  body .features .description {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  body .features .buttons {
+    display: block;
+    text-align: center;
+  }
+  body .features .buttons svg {
+    display: none;
+  }
+  body .features .buttons p {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (max-height: 650px) {
