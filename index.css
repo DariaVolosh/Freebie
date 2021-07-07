@@ -448,6 +448,7 @@ body .blog {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #D8E3FE;
 }
 body .blog .title {
   color: #3D4F9F;
@@ -566,6 +567,81 @@ body .blog .blog-and-arrows .blog-example .description .buttons .add-button {
 body .blog .dots {
   margin-bottom: 105px;
 }
+body .quotes {
+  background: linear-gradient(180deg, #EAF0FF, #F6F9FF);
+  height: 480px;
+  border-bottom: 1px solid #D8E3FE;
+  overflow: hidden;
+  position: relative;
+}
+body .quotes .text {
+  width: 23%;
+  position: absolute;
+  left: 19%;
+  top: 145px;
+}
+body .quotes .text .subheading,
+body .quotes .text h2 {
+  color: #3D4F9F;
+}
+body .quotes .text .subheading {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 10px;
+}
+body .quotes .text h2 {
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+body .quotes .text .description {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 23px;
+  color: #A4ABC8;
+}
+body .quotes .comments {
+  display: flex;
+  position: absolute;
+  top: 110px;
+  left: 51%;
+}
+body .quotes .comments div {
+  width: 425px;
+  height: 175px;
+  background-color: white;
+  border: 1px solid #D8E3FE;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+body .quotes .comments div p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #676F95;
+  width: 67%;
+  padding-top: 41px;
+}
+body .quotes .comments div img {
+  width: 62px;
+  height: auto;
+  position: absolute;
+  bottom: -31px;
+}
+body .quotes .comments svg {
+  position: absolute;
+  bottom: -78px;
+  left: 130px;
+}
+body .quotes .comments .comment {
+  margin-left: 65px;
+  opacity: 0.5;
+}
 @media only screen and (max-width: 1400px) {
   body .blog .blog-and-arrows #left-arrow {
     margin-right: 30px;
@@ -625,6 +701,12 @@ body .blog .dots {
   }
   body .blog .blog-and-arrows .blog-example .description .buttons .add-button {
     margin-top: 10px;
+  }
+  body .quotes .text {
+    left: 70px;
+  }
+  body .quotes .comments {
+    left: 40%;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -748,6 +830,20 @@ body .blog .dots {
   body .blog .dots {
     margin-bottom: 60px;
   }
+  body .quotes {
+    height: 550px;
+  }
+  body .quotes .text {
+    width: 85%;
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 30px;
+    position: initial;
+  }
+  body .quotes .comments {
+    left: 30px;
+    top: 230px;
+  }
 }
 @media only screen and (max-width: 500px) {
   body .features .figures1,
@@ -803,6 +899,39 @@ body .blog .dots {
   }
   body .blog .blog-and-arrows .arrow {
     display: none;
+  }
+  body .quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+  }
+  body .quotes .text {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+  body .quotes .comments {
+    position: relative;
+    top: 40px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .quotes .comments div {
+    width: 85%;
+    height: auto;
+  }
+  body .quotes .comments div p {
+    padding-bottom: 53px;
+  }
+  body .quotes .comments .comment {
+    display: none;
+  }
+  body .quotes .comments svg {
+    left: 0;
+    position: relative;
   }
 }
 @media only screen and (max-width: 400px) {
