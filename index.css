@@ -946,7 +946,6 @@ body .faq #last-question {
   }
   body .faq #clicked-question .info {
     display: block;
-    border: 1px solid blue;
   }
   body .faq #clicked-question .info p {
     padding-left: 60px;
