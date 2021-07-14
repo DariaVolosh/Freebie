@@ -81,67 +81,16 @@ body .banner {
   top: -80px;
   z-index: 1;
   background-color: #F3F6FF;
+  background-image: url("./images/clouds1.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center bottom -10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 650px;
   overflow: hidden;
-}
-body .banner .figure1 circle,
-body .banner .figure2 circle,
-body .banner .figure3 circle {
-  fill: white;
-}
-body .banner .figure1 {
-  width: 45px;
-  position: absolute;
-  left: 17.5vw;
-  top: 26vh;
-}
-body .banner .figure2 {
-  width: 148px;
-  position: absolute;
-  left: -74px;
-  top: 40vh;
-}
-body .banner .figure3 {
-  position: absolute;
-  width: 110px;
-  right: -55px;
-  bottom: 16.6vh;
-}
-body .banner .figures1 svg,
-body .banner .figures2 svg,
-body .banner .figures3 svg {
-  position: absolute;
-}
-body .banner .figures1 svg circle,
-body .banner .figures2 svg circle,
-body .banner .figures3 svg circle {
-  fill: white;
-}
-body .banner .figures1 {
-  position: absolute;
-  top: 71.7vh;
-  left: 17.6vw;
-  height: 35px;
-  width: 70px;
-}
-body .banner .figures2 {
-  position: absolute;
-  right: 9.6vw;
-  top: 25.5vh;
-  width: 100px;
-  height: 75px;
-}
-body .banner .figures3 {
-  position: absolute;
-  width: 160px;
-  height: 60px;
-  right: 14vw;
-  bottom: 6.3vh;
-  z-index: 2;
 }
 body .banner .text {
   text-align: center;
@@ -299,16 +248,10 @@ body .features {
   align-items: center;
   position: relative;
   border-bottom: 1px solid #D8E3FE;
-}
-body .features .figures1,
-body .features .figures2,
-body .features .figures3 {
-  position: absolute;
-}
-body .features .figures1 svg,
-body .features .figures2 svg,
-body .features .figures3 svg {
-  position: absolute;
+  background-image: url(./images/clouds2.svg);
+  background-repeat: no-repeat;
+  background-position: center top 90px;
+  background-size: 100%;
 }
 body .features .title,
 body .features .description,
@@ -374,6 +317,14 @@ body .features .buttons button {
   font-family: Quicksand;
   font-weight: 700;
   font-size: 13px;
+}
+body .features .buttons .read-more-button {
+  background-color: #FFD7D7;
+  color: #D43F3F;
+}
+body .features .buttons .get-started-button {
+  background-color: #D2E1FF;
+  color: #3A79FF;
 }
 body .features .buttons svg {
   margin-right: 16px;
@@ -733,7 +684,143 @@ body .faq #clicked-question .info button {
 body .faq #last-question {
   margin-bottom: 175px;
 }
+body .get-started {
+  background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+  height: 450px;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .get-started .clouds {
+  background-image: url(./images/clouds3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  z-index: 0;
+}
+body .get-started p,
+body .get-started h2,
+body .get-started .buttons {
+  z-index: 1;
+}
+body .get-started p,
+body .get-started h2 {
+  text-align: center;
+}
+body .get-started .subheading {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 10px;
+  padding-top: 90px;
+}
+body .get-started h2 {
+  font-family: Quicksand;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 300;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+body .get-started .text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  width: 47%;
+}
+body .get-started .buttons {
+  margin-top: 60px;
+}
+body .get-started .buttons button {
+  font-family: Quicksand;
+  background: transparent;
+  height: 45px;
+  font-size: 13px;
+}
+body .get-started .buttons .pricing {
+  width: 130px;
+  font-weight: 700;
+  background-color: white;
+  border: none;
+  color: #565F82;
+}
+body .get-started .buttons .documentation {
+  width: 155px;
+  font-weight: 500;
+  border: 1px solid #A0B4FF;
+  color: #C7D3FF;
+}
+body .newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D8E3FE;
+}
+body .newsletter .content {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 62%;
+}
+body .newsletter .content .text {
+  width: 36%;
+  padding-right: 80px;
+}
+body .newsletter .content .text p,
+body .newsletter .content .text h5 {
+  letter-spacing: 3%;
+}
+body .newsletter .content .text h5 {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3D4F9F;
+  padding-bottom: 20px;
+}
+body .newsletter .content .text p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8D96BD;
+  line-height: 27px;
+}
+body .newsletter .content .form {
+  display: flex;
+}
+body .newsletter .content .form input,
+body .newsletter .content .form button {
+  border-radius: 5px;
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+}
+body .newsletter .content .form input {
+  background-color: #EFEFF7;
+  width: 255px;
+  height: 60px;
+  color: #7A85AD;
+  padding-left: 25px;
+  padding-right: 0;
+}
+body .newsletter .content .form button {
+  width: 185px;
+  height: 60px;
+  background-color: #4D6CE1;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+  margin-left: 15px;
+}
 @media only screen and (max-width: 1400px) {
+  body .banner {
+    background-size: cover;
+  }
   body .blog .blog-and-arrows #left-arrow {
     margin-right: 30px;
   }
@@ -808,6 +895,9 @@ body .faq #last-question {
   body .faq #last-question {
     margin-bottom: 100px;
   }
+  body .newsletter .content {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 900px) {
   body .blog .blog-and-arrows .blog-example {
@@ -850,10 +940,6 @@ body .faq #last-question {
   }
   body .banner {
     top: -60px;
-  }
-  body .banner .figures3,
-  body .banner .figure3 {
-    display: none;
   }
   body .banner .text {
     bottom: 0;
@@ -954,13 +1040,26 @@ body .faq #last-question {
   body .faq #clicked-question .info button {
     margin-top: 20px;
   }
+  body .get-started {
+    justify-content: center;
+  }
+  body .get-started .subheading {
+    padding-top: 0;
+  }
+  body .newsletter .content .text {
+    width: auto;
+    padding-right: 30px;
+  }
+  body .newsletter .content .form {
+    display: block;
+    width: 280px;
+  }
+  body .newsletter .content .form button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 @media only screen and (max-width: 500px) {
-  body .features .figures1,
-  body .features .figures2,
-  body .features .figures3 {
-    display: none;
-  }
   body .features .title {
     margin-top: 80px;
   }
@@ -1079,6 +1178,36 @@ body .faq #last-question {
   body .faq #clicked-question .info button {
     margin-left: 0;
   }
+  body .get-started {
+    height: 500px;
+  }
+  body .get-started .text,
+  body .get-started h2 {
+    width: 80%;
+  }
+  body .get-started h2 {
+    font-size: 43px;
+  }
+  body .get-started .buttons {
+    margin-top: 40px;
+  }
+  body .newsletter .content {
+    flex-direction: column;
+    justify-content: initial;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  body .newsletter .content .text {
+    padding-right: 0;
+    text-align: center;
+  }
+  body .newsletter .content .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
 }
 @media only screen and (max-width: 400px) {
   body nav .nav-content .right-side {
@@ -1129,25 +1258,5 @@ body .faq #last-question {
   body .features .buttons p {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-}
-@media only screen and (max-height: 650px) {
-  body .banner .figure1 {
-    top: 172px;
-  }
-  body .banner .figure2 {
-    top: 256px;
-  }
-  body .banner .figure3 {
-    bottom: 108px;
-  }
-  body .banner .figures1 {
-    top: 466px;
-  }
-  body .banner .figures2 {
-    top: 166px;
-  }
-  body .banner .figures3 {
-    bottom: 41px;
   }
 }
