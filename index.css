@@ -1,3 +1,68 @@
+body .nav-content {
+  width: 83.75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .nav-content .left-side,
+body .nav-content .right-side {
+  display: flex;
+  justify-content: space-between;
+}
+body .nav-content .left-side {
+  width: 43.6%;
+  min-width: 450px;
+}
+body .nav-content .left-side .logo {
+  width: 27px;
+  height: 27px;
+  border-radius: 13px;
+  background-color: #5E81FE;
+}
+body .nav-content .left-side button {
+  display: none;
+}
+body .nav-content .left-side button,
+body .nav-content .left-side a {
+  font-family: Quicksand;
+}
+body .nav-content .left-side .links {
+  width: 81.2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .nav-content .left-side .links a {
+  color: #697CA6;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+body .nav-content .right-side {
+  width: 26.4%;
+  min-width: 260px;
+}
+body .nav-content .right-side .social-medias {
+  width: 50.7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .nav-content .right-side .social-medias a {
+  outline: none;
+}
+body .nav-content .right-side button {
+  height: 43px;
+  width: 113px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3A79FF;
+  font-family: Quicksand;
+  border-radius: 2px;
+  background-color: #D2E1FF;
+  border: none;
+}
 body nav {
   width: 100%;
   height: 80px;
@@ -8,71 +73,6 @@ body nav {
   z-index: 2;
   position: relative;
   background-color: white;
-}
-body nav .nav-content {
-  width: 83.75%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-body nav .nav-content .left-side,
-body nav .nav-content .right-side {
-  display: flex;
-  justify-content: space-between;
-}
-body nav .nav-content .left-side {
-  width: 43.6%;
-  min-width: 450px;
-}
-body nav .nav-content .left-side .logo {
-  width: 27px;
-  height: 27px;
-  border-radius: 13px;
-  background-color: #5E81FE;
-}
-body nav .nav-content .left-side button {
-  display: none;
-}
-body nav .nav-content .left-side button,
-body nav .nav-content .left-side a {
-  font-family: Quicksand;
-}
-body nav .nav-content .left-side .links {
-  width: 81.2%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-body nav .nav-content .left-side .links a {
-  color: #697CA6;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-}
-body nav .nav-content .right-side {
-  width: 26.4%;
-  min-width: 260px;
-}
-body nav .nav-content .right-side .social-medias {
-  width: 50.7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-body nav .nav-content .right-side .social-medias a {
-  outline: none;
-}
-body nav .nav-content .right-side button {
-  height: 43px;
-  width: 113px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #3A79FF;
-  font-family: Quicksand;
-  border-radius: 2px;
-  background-color: #D2E1FF;
-  border: none;
 }
 body .banner {
   height: 100vh;
@@ -250,8 +250,7 @@ body .features {
   border-bottom: 1px solid #D8E3FE;
   background-image: url(./images/clouds2.svg);
   background-repeat: no-repeat;
-  background-position: center top 90px;
-  background-size: 100%;
+  background-size: cover;
 }
 body .features .title,
 body .features .description,
@@ -782,6 +781,7 @@ body .newsletter .content .text h5 {
   font-size: 18px;
   color: #3D4F9F;
   padding-bottom: 20px;
+  line-height: 23px;
 }
 body .newsletter .content .text p {
   font-family: Roboto;
@@ -817,6 +817,27 @@ body .newsletter .content .form button {
   box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
   margin-left: 15px;
 }
+body footer {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body footer .wrapper {
+  width: 83.75%;
+}
+body footer .wrapper #bottom-nav {
+  width: 100%;
+}
+body footer .wrapper p {
+  font-family: Quicksand;
+  color: #AEB8D0;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding-top: 30px;
+}
 @media only screen and (max-width: 1400px) {
   body .banner {
     background-size: cover;
@@ -832,7 +853,7 @@ body .newsletter .content .form button {
   }
 }
 @media only screen and (max-width: 1200px) {
-  body nav .nav-content {
+  body .nav-content {
     width: 95%;
   }
   body .banner .text .description {
@@ -898,6 +919,9 @@ body .newsletter .content .form button {
   body .newsletter .content {
     width: 90%;
   }
+  body footer .wrapper {
+    width: 95%;
+  }
 }
 @media only screen and (max-width: 900px) {
   body .blog .blog-and-arrows .blog-example {
@@ -917,16 +941,13 @@ body .newsletter .content .form button {
   }
 }
 @media only screen and (max-width: 800px) {
-  body nav {
-    height: 60px;
-  }
-  body nav .nav-content .left-side {
+  body .nav-content .left-side {
     align-items: center;
     justify-content: flex-start;
     width: auto;
     min-width: auto;
   }
-  body nav .nav-content .left-side button {
+  body .nav-content .left-side button {
     display: block;
     font-size: 13px;
     color: #5E81FE;
@@ -935,8 +956,11 @@ body .newsletter .content .form button {
     background: none;
     margin-left: 10px;
   }
-  body nav .nav-content .left-side .links {
+  body .nav-content .left-side .links {
     display: none;
+  }
+  body nav {
+    height: 60px;
   }
   body .banner {
     top: -60px;
@@ -1058,8 +1082,14 @@ body .newsletter .content .form button {
     margin-left: 0;
     margin-top: 20px;
   }
+  body footer {
+    height: 150px;
+  }
 }
 @media only screen and (max-width: 500px) {
+  body .features {
+    background-image: none;
+  }
   body .features .title {
     margin-top: 80px;
   }
@@ -1210,14 +1240,14 @@ body .newsletter .content .form button {
   }
 }
 @media only screen and (max-width: 400px) {
-  body nav .nav-content .right-side {
+  body .nav-content .right-side {
     width: auto;
     min-width: auto;
   }
-  body nav .nav-content .right-side .social-medias {
+  body .nav-content .right-side .social-medias {
     display: none;
   }
-  body nav .nav-content .right-side button {
+  body .nav-content .right-side button {
     height: 30px;
   }
   body .banner .text h1 {
@@ -1258,5 +1288,21 @@ body .newsletter .content .form button {
   body .features .buttons p {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  body footer {
+    height: 180px;
+  }
+  body footer .wrapper #bottom-nav {
+    flex-direction: column;
+  }
+  body footer .wrapper #bottom-nav .logo {
+    width: 10px;
+    height: 10px;
+  }
+  body footer .wrapper #bottom-nav .right-side {
+    margin-top: 20px;
+  }
+  body footer p {
+    text-align: center;
   }
 }
