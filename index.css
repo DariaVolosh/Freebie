@@ -38,6 +38,10 @@ body .nav-content .left-side .links a {
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
+  transition: 0.5s;
+}
+body .nav-content .left-side .links a:hover {
+  color: #5E81FE;
 }
 body .nav-content .right-side {
   width: 26.4%;
@@ -51,6 +55,11 @@ body .nav-content .right-side .social-medias {
 }
 body .nav-content .right-side .social-medias a {
   outline: none;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+body .nav-content .right-side .social-medias a:hover {
+  opacity: 1;
 }
 body .nav-content .right-side button {
   height: 43px;
@@ -62,6 +71,10 @@ body .nav-content .right-side button {
   border-radius: 2px;
   background-color: #D2E1FF;
   border: none;
+  transition: 0.3s;
+}
+body .nav-content .right-side button:hover {
+  transform: translate(0, 5px);
 }
 body nav {
   width: 100%;
@@ -71,14 +84,13 @@ body nav {
   align-items: center;
   border-bottom: 1px solid #D8E3FE;
   z-index: 2;
-  position: relative;
+  position: fixed;
   background-color: white;
 }
 body .banner {
   height: 100vh;
   width: 100%;
   position: relative;
-  top: -80px;
   z-index: 1;
   background-color: #F3F6FF;
   background-image: url("./images/clouds1.svg");
@@ -125,6 +137,11 @@ body .banner .text .description {
   width: 40.5%;
   font-family: Roboto;
 }
+@keyframes playButton {
+  to {
+    transform: scale(1.1, 1.1);
+  }
+}
 body .banner .text button {
   width: 52px;
   height: 52px;
@@ -136,14 +153,11 @@ body .banner .text button {
   align-items: center;
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
   margin-top: 20px;
-}
-body .banner .text button div {
-  border: 8px solid transparent;
-  border-left: 12px solid #5E81FF;
-  width: 0;
-  height: 0;
-  position: relative;
-  left: 6px;
+  animation-name: playButton;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  border: 1px solid #5E81FF4D;
 }
 body .banner .wave {
   position: absolute;
@@ -161,7 +175,6 @@ body .customers {
   width: 100%;
   border-top: 1px solid #D8E3FE;
   border-bottom: 1px solid #D8E3FE;
-  margin-top: -80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,8 +188,11 @@ body .customers .images {
   margin-bottom: 58px;
   width: 60%;
 }
-body .customers .images img {
+body .customers .images svg {
   margin: 20px;
+}
+body .customers .images svg path {
+  fill: #d6dae5;
 }
 body .plan-and-manage {
   height: 776px;
@@ -224,18 +240,21 @@ body .plan-and-manage .text-and-buttons div button {
   font-family: Quicksand;
   font-size: 13px;
 }
-body .plan-and-manage .text-and-buttons div .view-video {
+body .plan-and-manage .text-and-buttons div .view-video,
+body .plan-and-manage .text-and-buttons div .see-features:hover {
   background-color: #4C85FF;
   font-weight: 700;
   color: white;
   border: none;
   box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
 }
-body .plan-and-manage .text-and-buttons div .see-features {
+body .plan-and-manage .text-and-buttons div .see-features,
+body .plan-and-manage .text-and-buttons div .see-features:hover + button {
   font-weight: 500;
   border: 1px solid #D1D1E4;
   color: #ADB4D2;
   background: none;
+  transition: 0.5s;
 }
 body .plan-and-manage svg {
   width: 640px;
@@ -316,14 +335,23 @@ body .features .buttons button {
   font-family: Quicksand;
   font-weight: 700;
   font-size: 13px;
+  transition: 0.5s;
 }
 body .features .buttons .read-more-button {
   background-color: #FFD7D7;
   color: #D43F3F;
 }
+body .features .buttons .read-more-button:hover {
+  box-shadow: -5px 5px 5px #D43F3F;
+  transform: translate(5px, -5px);
+}
 body .features .buttons .get-started-button {
   background-color: #D2E1FF;
   color: #3A79FF;
+}
+body .features .buttons .get-started-button:hover {
+  box-shadow: 5px 5px 4px #3A79FF;
+  transform: translate(-5px, -5px);
 }
 body .features .buttons svg {
   margin-right: 16px;
@@ -399,6 +427,7 @@ body .blog {
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #D8E3FE;
+  overflow: hidden;
 }
 body .blog .title {
   color: #3D4F9F;
@@ -425,12 +454,20 @@ body .blog .blog-and-arrows img {
 }
 body .blog .blog-and-arrows .arrow {
   width: 23px;
+  cursor: pointer;
+  transition: 1s;
 }
 body .blog .blog-and-arrows #left-arrow {
   margin-right: 75px;
 }
+body .blog .blog-and-arrows #left-arrow:hover {
+  transform: translate(-10px, 0);
+}
 body .blog .blog-and-arrows #right-arrow {
   margin-left: 75px;
+}
+body .blog .blog-and-arrows #right-arrow:hover {
+  transform: translate(10px, 0);
 }
 body .blog .blog-and-arrows .blog-example {
   width: 66vw;
@@ -439,6 +476,7 @@ body .blog .blog-and-arrows .blog-example {
   border: 1px solid #D8E3FE;
   display: flex;
   align-items: center;
+  position: relative;
 }
 body .blog .blog-and-arrows .blog-example .photos,
 body .blog .blog-and-arrows .blog-example .description {
@@ -962,9 +1000,6 @@ body footer .wrapper p {
   body nav {
     height: 60px;
   }
-  body .banner {
-    top: -60px;
-  }
   body .banner .text {
     bottom: 0;
   }
@@ -973,9 +1008,6 @@ body footer .wrapper p {
   }
   body .banner .dots {
     display: none;
-  }
-  body .customers {
-    margin-top: -60px;
   }
   body .customers .images {
     width: 90%;
